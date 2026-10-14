@@ -1,0 +1,126 @@
+[
+  {
+    "page": "index",
+    "device": "Desktop",
+    "width": 1440,
+    "viewport": 1440,
+    "height": 4532,
+    "broken": [],
+    "page_errors": []
+  },
+  {
+    "page": "index",
+    "device": "Mobile",
+    "width": 390,
+    "viewport": 390,
+    "height": 6629,
+    "broken": [],
+    "page_errors": [],
+    "menu_open": "block",
+    "menu_close": "none"
+  },
+  {
+    "page": "profil",
+    "device": "Desktop",
+    "width": 1440,
+    "viewport": 1440,
+    "height": 4204,
+    "broken": [],
+    "page_errors": []
+  },
+  {
+    "page": "profil",
+    "device": "Mobile",
+    "width": 390,
+    "viewport": 390,
+    "height": 6488,
+    "broken": [],
+    "page_errors": [],
+    "menu_open": "block",
+    "menu_close": "none"
+  },
+  {
+    "page": "pengajian",
+    "device": "Desktop",
+    "width": 1440,
+    "viewport": 1440,
+    "height": 3798,
+    "broken": [],
+    "page_errors": []
+  },
+  {
+    "page": "pengajian",
+    "device": "Mobile",
+    "width": 390,
+    "viewport": 390,
+    "height": 5786,
+    "broken": [],
+    "page_errors": [],
+    "menu_open": "block",
+    "menu_close": "none"
+  },
+  {
+    "page": "kemasukan",
+    "device": "Desktop",
+    "width": 1440,
+    "viewport": 1440,
+    "height": 3911,
+    "broken": [],
+    "page_errors": []
+  },
+  {
+    "page": "kemasukan",
+    "device": "Mobile",
+    "width": 390,
+    "viewport": 390,
+    "height": 6452,
+    "broken": [],
+    "page_errors": [],
+    "menu_open": "block",
+    "menu_close": "none"
+  },
+  {
+    "page": "galeri",
+    "device": "Desktop",
+    "width": 1440,
+    "viewport": 1440,
+    "height": 3863,
+    "broken": [],
+    "page_errors": [],
+    "tvet_visible": 2,
+    "lightbox_open": true,
+    "lightbox_closed": true
+  },
+  {
+    "page": "galeri",
+    "device": "Mobile",
+    "width": 390,
+    "viewport": 390,
+    "height": 5174,
+    "broken": [],
+    "page_errors": [],
+    "menu_open": "block",
+    "menu_close": "none"
+  },
+  {
+    "page": "hubungi",
+    "device": "Desktop",
+    "width": 1440,
+    "viewport": 1440,
+    "height": 3117,
+    "broken": [],
+    "page_errors": [],
+    "faq_expand": "true"
+  },
+  {
+    "page": "hubungi",
+    "device": "Mobile",
+    "width": 390,
+    "viewport": 390,
+    "height": 4605,
+    "broken": [],
+    "page_errors": [],
+    "menu_open": "block",
+    "menu_close": "none"
+  }
+]
