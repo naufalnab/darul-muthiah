@@ -57,19 +57,19 @@
     "page": "kemasukan",
     "view": "Desktop_Full",
     "baseline_dimensions": "1440x3911",
-    "new_dimensions": "1440x3626",
+    "new_dimensions": "1440x3885",
     "width_match": true,
-    "height_delta": -285,
-    "fold_similarity_pct": 75.44
+    "height_delta": -26,
+    "fold_similarity_pct": 95.59
   },
   {
     "page": "kemasukan",
     "view": "Mobile_Full",
     "baseline_dimensions": "390x6452",
-    "new_dimensions": "390x5934",
+    "new_dimensions": "390x6576",
     "width_match": true,
-    "height_delta": -518,
-    "fold_similarity_pct": 69.67
+    "height_delta": 124,
+    "fold_similarity_pct": 90.63
   },
   {
     "page": "galeri",

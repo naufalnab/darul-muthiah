@@ -12,26 +12,26 @@ export interface FeeItem {
 export const feeItems: FeeItem[] = [
   {
     id: 'pendaftaran',
-    category: 'Pendaftaran & Tahunan',
+    category: 'PENDAFTARAN & TAHUNAN',
     value: claimsRegistry.fee_registration_annual.value,
-    period: 'Sekali setahun / kemasukan',
-    description: 'Berdasarkan rujukan sesi 2026/2027; yuran rasmi semasa tertakluk kepada pengesahan.',
+    period: 'Rujukan dokumen 2026/2027',
+    description: 'Jumlah beberapa komponen yuran pendaftaran dan tahunan.',
     claimId: 'fee_registration_annual'
   },
   {
     id: 'asrama',
-    category: 'Pengajian Asrama',
+    category: 'PENGAJIAN ASRAMA',
     value: claimsRegistry.fee_hostel_monthly.value,
-    period: '/ bulan',
-    description: 'Termasuk pengajian, asrama, makan minum dan bimbingan harian.',
+    period: 'sebulan · rujukan dokumen',
+    description: 'Maklumat kemudahan dan yuran semasa perlu disahkan kepada pihak maahad.',
     claimId: 'fee_hostel_monthly'
   },
   {
     id: 'harian',
-    category: 'Pengajian Harian',
+    category: 'PENGAJIAN HARIAN',
     value: claimsRegistry.fee_day_monthly.value,
-    period: '/ bulan',
-    description: 'Pilihan untuk pelajar harian yang pulang ke rumah.',
+    period: 'sebulan · rujukan dokumen',
+    description: 'Pilihan pengajian harian dengan syarat dan susunan terkini yang perlu disahkan.',
     claimId: 'fee_day_monthly'
   }
 ];
@@ -39,26 +39,26 @@ export const feeItems: FeeItem[] = [
 export const admissionsSteps = [
   {
     num: '01',
-    title: 'Pertanyaan & Maklumat',
-    description: 'Hubungi maahad untuk menyemak kekosongan, syarat asas dan jadual temu duga.'
+    title: 'Semak kelayakan',
+    description: 'Pastikan calon pelajar memenuhi syarat asas yang dinyatakan untuk sesi pendaftaran.'
   },
   {
     num: '02',
-    title: 'Penilaian & Temu Duga',
-    description: 'Calon pelajar menghadiri sesi penilaian membaca Al-Quran dan kesesuaian asas.'
+    title: 'Pilih program',
+    description: 'Kenali laluan Hafazan, Syahadah atau SPM Fast Track JAIS yang diminati.'
   },
   {
     num: '03',
-    title: 'Pendaftaran Rasmi',
-    description: 'Penyelesaian borang rasmi dan taklimat kemasukan bersama pihak pengurusan.'
+    title: 'Hubungi maahad',
+    description: 'Hantar pertanyaan melalui WhatsApp untuk langkah seterusnya. Ini bukan pengesahan pendaftaran.'
   }
 ];
 
 export const admissionsChecklist = [
-  'Warganegara Malaysia',
-  'Pelajar perempuan berumur 10 hingga 17 tahun',
-  'Boleh membaca asas Al-Quran',
-  'Minat serta kesediaan mendalami hafazan',
-  'Komitmen ibu bapa/penjaga terhadap peraturan maahad',
-  'Pemeriksaan kesihatan asas'
+  'Pelajar perempuan berumur 10–17 tahun',
+  'Berminat dalam hafazan Al-Quran',
+  'Boleh membaca, mengira dan mengeja (3M)',
+  'Bersedia mengikuti proses tarbiah',
+  'Mempunyai akhlak yang baik',
+  'Sihat tubuh badan'
 ];
