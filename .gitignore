@@ -15,6 +15,14 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Sensitive / client archives (must not be in build or public releases)
-Archive.zip
+# Sensitive client documents & raw unapproved archives (NEVER COMMIT)
 *.pdf
+*.zip
+*.tar.gz
+*.rar
+*.7z
+Archive.zip
+00000*
+raw_assets/
+client_docs/
+
