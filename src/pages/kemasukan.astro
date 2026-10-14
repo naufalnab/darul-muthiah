@@ -1,0 +1,117 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PrimaryCTA from '../components/PrimaryCTA.astro';
+import WhatsAppInquiryForm from '../components/WhatsAppInquiryForm.astro';
+import { admissionsSteps, admissionsChecklist, feeItems } from '../content/fees';
+import { siteConfig } from '../content/siteConfig';
+
+const title = "Kemasukan & Yuran — MADUM";
+const description = "Panduan lengkap syarat kelayakan, proses pendaftaran, rujukan yuran, serta borang pertanyaan WhatsApp Maahad Darul Muthiah.";
+---
+<SiteLayout title={title} description={description} activeRoute="/kemasukan">
+  <!-- Plain Hero -->
+  <section class="plain-hero" aria-labelledby="kemasukan-hero-title">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Utama</a><b>/</b><span>Kemasukan &amp; Yuran</span>
+      </nav>
+      <div class="eyebrow">PENGAMBILAN SESI {siteConfig.admissionsSession}</div>
+      <h1 id="kemasukan-hero-title">
+        Langkah kemasukan <em>&amp; maklumat yuran.</em>
+      </h1>
+      <p class="inner-lead">
+        Panduan mengenai kelayakan, alur permohonan serta anggaran yuran bagi ibu bapa yang berminat mendaftarkan anak ke MADUM.
+      </p>
+      <span class="pending">Maklumat yuran &amp; sesi tertakluk kepada pengesahan rasmi</span>
+    </div>
+  </section>
+
+  <!-- Langkah Pendaftaran -->
+  <section class="section-compact surface-cream" aria-labelledby="langkah-title">
+    <div class="container">
+      <div class="eyebrow">PROSES PENDAFTARAN</div>
+      <h2 class="section-title" id="langkah-title">Tiga langkah mudah untuk bermula.</h2>
+      <div class="steps">
+        {admissionsSteps.map(step => (
+          <div class="step">
+            <span class="number">{step.num}</span>
+            <h3>{step.title}</h3>
+            <p>{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Syarat Kelayakan -->
+  <section class="section-compact surface-white" aria-labelledby="syarat-title">
+    <div class="container">
+      <div class="eyebrow">SYARAT KELAYAKAN</div>
+      <h2 class="section-title" id="syarat-title">Kriteria asas kemasukan pelajar.</h2>
+      <ul class="checklist">
+        {admissionsChecklist.map(item => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <div class="review-note">
+        Pengambilan tertakluk kepada kekosongan asrama dan temuduga penilaian. Calon yang memerlukan bantuan asnaf boleh memaklumkan semasa sesi permohonan.
+      </div>
+    </div>
+  </section>
+
+  <!-- Struktur Yuran -->
+  <section class="section-compact surface-soft" aria-labelledby="yuran-title">
+    <div class="container">
+      <div class="eyebrow">STRUKTUR YURAN</div>
+      <h2 class="section-title" id="yuran-title">Rujukan kadar yuran semasa.</h2>
+      <p class="section-sub">
+        Kadar berikut diambil daripada dokumen profil {siteConfig.admissionsSession} bagi tujuan perancangan awal dan memerlukan pengesahan rasmi pihak maahad sebelum penerbitan.
+      </p>
+      <div class="fees">
+        {feeItems.map(fee => (
+          <article class="fee-card">
+            <div class="fee-top">
+              <b>{fee.category}</b>
+            </div>
+            <div class="fee-body">
+              <span class="value">
+                {fee.value} <span class="suffix">{fee.period}</span>
+              </span>
+              <p>{fee.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pertanyaan & Borang WhatsApp -->
+  <section class="section-compact surface-white" id="pertanyaan" aria-labelledby="pertanyaan-title">
+    <div class="container two-cols">
+      <div>
+        <div class="eyebrow">PERTANYAAN PANTAS</div>
+        <h2 class="section-title" id="pertanyaan-title">Mulakan perbualan bersama pihak maahad.</h2>
+        <div class="prose">
+          <p>Borang di sebelah akan menyusun mesej WhatsApp ringkas dengan butiran asas calon pelajar.</p>
+          <p>Anda boleh menyemak teks tersebut sebelum menekan hantar dalam aplikasi WhatsApp anda.</p>
+        </div>
+        <div class="review-note">
+          Pendaftaran rasmi memerlukan borang dan dokumen lengkap yang disahkan oleh pihak maahad.
+        </div>
+      </div>
+      <div>
+        <WhatsAppInquiryForm />
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <PrimaryCTA
+    eyebrow="LANGKAH SETERUSNYA"
+    title="Ada sebarang pertanyaan khusus?"
+    description="Hubungi pihak maahad untuk perbincangan lanjut mengenai kemasukan atau jadual lawatan."
+    ctaText="Tanya Kemasukan"
+    ctaHref="#pertanyaan"
+    disclaimer="Pratonton dalaman · Pengesahan diperlukan"
+  />
+</SiteLayout>

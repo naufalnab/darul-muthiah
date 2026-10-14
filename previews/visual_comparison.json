@@ -1,0 +1,110 @@
+[
+  {
+    "page": "index",
+    "view": "Desktop_Full",
+    "baseline_dimensions": "1440x4532",
+    "new_dimensions": "1440x4549",
+    "width_match": true,
+    "height_delta": 17,
+    "fold_similarity_pct": 95.36
+  },
+  {
+    "page": "index",
+    "view": "Mobile_Full",
+    "baseline_dimensions": "390x6629",
+    "new_dimensions": "390x6747",
+    "width_match": true,
+    "height_delta": 118,
+    "fold_similarity_pct": 89.92
+  },
+  {
+    "page": "profil",
+    "view": "Desktop_Full",
+    "baseline_dimensions": "1440x4204",
+    "new_dimensions": "1440x4160",
+    "width_match": true,
+    "height_delta": -44,
+    "fold_similarity_pct": 96.51
+  },
+  {
+    "page": "profil",
+    "view": "Mobile_Full",
+    "baseline_dimensions": "390x6488",
+    "new_dimensions": "390x6545",
+    "width_match": true,
+    "height_delta": 57,
+    "fold_similarity_pct": 91.0
+  },
+  {
+    "page": "pengajian",
+    "view": "Desktop_Full",
+    "baseline_dimensions": "1440x3798",
+    "new_dimensions": "1440x3758",
+    "width_match": true,
+    "height_delta": -40,
+    "fold_similarity_pct": 95.75
+  },
+  {
+    "page": "pengajian",
+    "view": "Mobile_Full",
+    "baseline_dimensions": "390x5786",
+    "new_dimensions": "390x5829",
+    "width_match": true,
+    "height_delta": 43,
+    "fold_similarity_pct": 91.6
+  },
+  {
+    "page": "kemasukan",
+    "view": "Desktop_Full",
+    "baseline_dimensions": "1440x3911",
+    "new_dimensions": "1440x3626",
+    "width_match": true,
+    "height_delta": -285,
+    "fold_similarity_pct": 75.44
+  },
+  {
+    "page": "kemasukan",
+    "view": "Mobile_Full",
+    "baseline_dimensions": "390x6452",
+    "new_dimensions": "390x5934",
+    "width_match": true,
+    "height_delta": -518,
+    "fold_similarity_pct": 69.67
+  },
+  {
+    "page": "galeri",
+    "view": "Desktop_Full",
+    "baseline_dimensions": "1440x3863",
+    "new_dimensions": "1440x3732",
+    "width_match": true,
+    "height_delta": -131,
+    "fold_similarity_pct": 94.23
+  },
+  {
+    "page": "galeri",
+    "view": "Mobile_Full",
+    "baseline_dimensions": "390x5174",
+    "new_dimensions": "390x4670",
+    "width_match": true,
+    "height_delta": -504,
+    "fold_similarity_pct": 88.55
+  },
+  {
+    "page": "hubungi",
+    "view": "Desktop_Full",
+    "baseline_dimensions": "1440x3117",
+    "new_dimensions": "1440x2979",
+    "width_match": true,
+    "height_delta": -138,
+    "fold_similarity_pct": 94.8
+  },
+  {
+    "page": "hubungi",
+    "view": "Mobile_Full",
+    "baseline_dimensions": "390x4605",
+    "new_dimensions": "390x4653",
+    "width_match": true,
+    "height_delta": 48,
+    "fold_similarity_pct": 77.58
+  }
+]
