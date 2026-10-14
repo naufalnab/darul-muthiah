@@ -21,18 +21,18 @@
     "page": "profil",
     "view": "Desktop_Full",
     "baseline_dimensions": "1440x4204",
-    "new_dimensions": "1440x4160",
+    "new_dimensions": "1440x4176",
     "width_match": true,
-    "height_delta": -44,
+    "height_delta": -28,
     "fold_similarity_pct": 96.51
   },
   {
     "page": "profil",
     "view": "Mobile_Full",
     "baseline_dimensions": "390x6488",
-    "new_dimensions": "390x6545",
+    "new_dimensions": "390x6578",
     "width_match": true,
-    "height_delta": 57,
+    "height_delta": 90,
     "fold_similarity_pct": 91.0
   },
   {

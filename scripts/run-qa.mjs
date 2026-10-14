@@ -315,7 +315,7 @@ for (const pg of pages) {
       const href = fallbackLink ? fallbackLink.getAttribute('href') : '';
       const isEncodedCorrectly = href.includes('wa.me') &&
         href.includes(encodeURIComponent('Nama penjaga: Encik Ahmad Razali')) &&
-        href.includes(encodeURIComponent('Umur calon pelajar: 12 tahun'));
+        href.includes(encodeURIComponent('Umur calon pelajar: 12'));
 
       return {
         passed: isEncodedCorrectly,

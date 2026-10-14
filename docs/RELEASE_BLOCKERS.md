@@ -2,33 +2,51 @@
 
 **Status Keseluruhan:** 🔴 **BLOCKED FOR PUBLIC DEPLOYMENT**  
 **Mod Semasa:** `publicationMode = 'internal'` (Pratonton Dalaman Sahaja)  
-**Tujuan Dokumen:** Memastikan tiada maklumat yang belum disahkan, media pelajar bawah umur tanpa izin, atau janji transaksi yang diterbitkan ke Internet awam.
+**Mekanisme Keselamatan:** **Fail-Closed Automated Gatekeeper** ([`scripts/prebuild.mjs`](file:///Users/mac/Documents/darul-muthiah/scripts/prebuild.mjs) & [`scripts/postbuild.mjs`](file:///Users/mac/Documents/darul-muthiah/scripts/postbuild.mjs))  
+**Tujuan Dokumen:** Memastikan tiada maklumat yang belum disahkan, angka yuran tidak tepat, klaim sejarah palsu, media pelajar bawah umur tanpa izin, atau fail dalaman PDF/klien yang bocor ke output pengeluaran.
 
 ---
 
 ## 1. Jadual Pintu Pelepasan (Release Gates Matrix)
 
-| No | Bidang Maklumat | Nilai Semasa (Pratonton) | Sumber Asal | Punca Ketidakselarasan / Isu | Status | Tindakan Diperlukan Sebelum Go-Live | Polisi Paparan Semasa |
-|:---:|---|---|---|---|:---:|---|---|
-| **1** | **Tahun Sesi Kemasukan** | `2026/2027` | Pesan Cik Yatt & Profil PDF h.10 | Poster `00000125` memaparkan Sesi `2027`. | 🔴 **BLOCKED** | Dapatkan pengesahan rasmi sama ada sesi aktif adalah 2026/2027 atau 2027. | Papar dengan label penafian (`show_with_disclaimer`). |
-| **2** | **Nombor WhatsApp CTA** | `+60 12-310 8902` | HTML dipersetujui Cik Yatt | Poster `00000125` & Profil h.7 memaparkan `+60 12-202 3024` (Ustazah Raja). | 🔴 **BLOCKED** | Tentukan nombor telefon rasmi yang memegang talian pertanyaan kemasukan. | Digunakan secara terhad untuk ujian draf lokal/staging tertutup. |
-| **3** | **Domain & SSL** | `madum.ilmuniaga.com` | Arahan Cik Yatt | Poster mencatatkan `www.madum.edu.my`. | 🔴 **BLOCKED** | Sahkan domain utama, rekod DNS, status sijil SSL, dan dasar penghalaan (redirect) dari domain alternatif. | Ditetapkan sebagai canonical staging dalam mod internal. |
-| **4** | **Jadual & Kadar Yuran** | Pendaftaran: RM1,310<br>Asrama: RM500/bln<br>Harian: RM450/bln | Profil PDF h.10 | Angka adalah rujukan sesi lepas; belum disahkan bagi ambilan terkini. | 🔴 **BLOCKED** | Minta persetujuan bertulis pihak maahad untuk menyiarkan angka yuran terkini. | Jika belum disahkan di mod awam: ganti dengan teks *"Sila hubungi pihak maahad untuk yuran terkini"*. |
-| **5** | **Izin Penerbitan Media Pelajar** | 12 Foto Pelajar & 2 Video (Nasyid & Intro) | Dokumentasi aktiviti maahad | Melibatkan peserta didik di bawah umur (10–17 tahun). | 🔴 **BLOCKED** | Pengesahan hak cipta dan izin ibu bapa/penjaga (parental consent) mengikut undang-undang tempatan. | Dibenarkan dalam persekitaran pembangunan privat; **wajib disekat** sebelum sebarang penyiaran awam. |
-| **6** | **Pendaftaran JAIS & LZS** | Kod JAIS: `BZH8026`<br>Amil LZS: `Kod 1290` | Salinan sijil dalam fail PDF h.13 & h.14 | Tempoh perakuan JAIS tercatat hingga 13 Okt 2028; penggunaan logo/kapsyen rasmi memerlukan keizinan. | 🟡 **PENDING VERIFICATION** | Sahkan klausa teks undang-undang bersama pihak pentadbiran maahad. | Papar teks kod sahaja; jangan siarkan imej imbasan sijil atau butiran peribadi penandatangan. |
-| **7** | **Kronologi Sejarah 2012** | Mula aktiviti 2012, nama MADUM 2018 | Profil PDF h.3 vs h.7 | Halaman 3 menyebut perancangan akhir 2012; halaman 7 menyebut aktiviti bermula April 2012. | 🟡 **PENDING EDITORIAL** | Selaraskan naratif penubuhan agar konsisten sebelum disiarkan dalam teks profil. | Papar garis masa ringkas dengan nota semakan editorial. |
-| **8** | **Lokasi & Pin Google Maps** | No. 61, Jalan Gunung Nuang U11/28, Shah Alam | Teks alamat PDF | Koordinat pin tepat premis maahad perlu disahkan agar ibu bapa tidak tersasar. | 🟡 **PENDING CONFIRMATION** | Pengesahan pin lokasi fizikal maahad di Google Maps. | Peta grafik ditandakan sebagai ilustrasi; pautan terus ke carian Google Maps disediakan. |
-| **9** | **E-mel Pejabat** | `nunature@yahoo.com` | Dokumen asal | Domain emel komersial/lama; perlu kepastian sama ada ini saluran komunikasi awam rasmi. | 🟡 **PENDING CONFIRMATION** | Sahkan alamat e-mel rasmi yang dipantau oleh pengurusan maahad. | Dinyatakan dengan nota bahawa emel menunggu pengesahan institusi. |
-| **10** | **Kutipan Sumbangan & Zakat** | Tiada integrasi kewangan | Sempadan skop V1.0 | Mengelakkan salah faham kutipan wang tanpa audit atau lesen sah. | 🟢 **CLEARED (OUT OF SCOPE)** | Tiada sebarang nombor akaun bank atau kemudahan pembayaran dalam talian dimasukkan ke dalam kod. | Dikekalkan di luar skop V1.0. |
+| No | Bidang Maklumat | Nilai Rujukan (Sumber Asal) | Status Integriti | Mekanisme Fail-Closed (Mod Awam) | Tindakan Diperlukan Sebelum Go-Live |
+|:---:|---|---|:---:|---|---|
+| **1** | **Tahun Sesi Kemasukan** | `2026/2027` (Pesan Cik Yatt & PDF h.10 vs Poster 00000125: Sesi 2027) | 🔴 **BLOCKED** | Papar label penafian rasmi. | Sahkan sama ada sesi aktif adalah 2026/2027 atau 2027. |
+| **2** | **Klaim Sejarah Penubuhan 2003** | **DITOLAK** (Tiada dalam dokumen; PDF h.3 & h.7 catat mula April 2012) | 🔴 **CONFLICTED** | Disingkirkan dari seluruh kod sumber. | Dilarang sama sekali menyiarkan tahun 2003 tanpa dokumen sokongan. |
+| **3** | **Nombor WhatsApp Kemasukan** | `+60 12-310 8902` (Cik Yatt) vs `+60 12-202 3024` (Profil h.7) | 🔴 **BLOCKED** | Peringatan pra-tontonan dalaman aktif. | Tetapkan talian rasmi penerima pertanyaan wali santri. |
+| **4** | **Jadual & Kadar Yuran** | Pendaftaran: **RM 1,310**<br>Asrama: **RM 500**/bln<br>Harian: **RM 450**/bln (PDF h.10) | 🔴 **BLOCKED** | **Fail-Closed:** Jika belum diluluskan, angka disembunyikan dan diganti teks *"Hubungi Kami"* secara automatik. | Persetujuan bertulis pihak maahad bagi struktur yuran terkini. |
+| **5** | **Izin Penerbitan Media Pelajar** | 12 Foto Pelajar & 2 Klip Video (Usia 10–17 tahun) | 🔴 **BLOCKED** | **Fail-Closed:** Galeri foto/video tidak dirender & fail media disingkirkan daripada `dist/assets/` dalam mod awam. | Borang kebenaran bertulis ibu bapa/penjaga (parental consent). |
+| **6** | **Pendaftaran JAIS & LZS** | JAIS: `BZH8026` / `13S(8)18/59` (Luput: 13 Okt 2028)<br>LZS: `Kod 1290` | 🟡 **PENDING** | Teks nombor sahaja dipaparkan; tiada imbasan sijil atau data peribadi penandatangan. | Pengesahan hak siar nombor perakuan pada laman awam. |
+| **7** | **Domain & Konfigurasi Pelayan** | `madum.ilmuniaga.com` vs `www.madum.edu.my` | 🔴 **BLOCKED** | robots.txt `Disallow: /` dan meta `noindex, nofollow` aktif. | Pengesahan domain pengeluaran akhir dan sijil SSL. |
+| **8** | **Lokasi & Pin Google Maps** | No. 61, Jalan Gunung Nuang U11/28, Shah Alam | 🟡 **PENDING** | Peta ditandakan sebagai ilustrasi visual; pautan luar ke carian Maps. | Pengesahan pin koordinat premis bagi panduan pengunjung. |
+| **9** | **E-mel Rasmi Pejabat** | `nunature@yahoo.com` (PDF h.7) | 🟡 **PENDING** | Nota semakan institusi dipaparkan. | Sahkan sama ada peti surat Yahoo masih aktif digunakan. |
+| **10** | **Kutipan Transaksi Kewangan** | Tiada integrasi pembayaran | 🟢 **CLEARED** | Tiada nombor akaun bank atau kemudahan transaksi dalam kod. | Dikekalkan di luar skop versi 1.0. |
 
 ---
 
-## 2. Kriteria Pelepasan ke Pengeluaran (Go-Live Checklist)
+## 2. Kriteria Pelepasan Automatik (Automated Gatekeeper Enforcement)
 
-Sebelum status `publicationMode` diubah daripada `'internal'` kepada `'public'`, semua langkah berikut **mesti diselesaikan**:
+Sistem binaan kini dilengkapi skrip pra-binaan [`scripts/prebuild.mjs`](file:///Users/mac/Documents/darul-muthiah/scripts/prebuild.mjs):
+1. Jika pemboleh ubah `publicationMode` diubah kepada `'public'` dalam [`src/content/siteConfig.ts`](file:///Users/mac/Documents/darul-muthiah/src/content/siteConfig.ts):
+   - Skrip akan menyemak objek `releaseApprovals`:
+     - `feesApproved`
+     - `historyApproved`
+     - `studentMediaConsentApproved`
+     - `officialContactApproved`
+     - `jaisUsageApproved`
+   - Sekiranya terdapat sekurang-kurangnya SATU sekatan yang bernilai `false`, perintah `pnpm run build` akan **TERUS DIBATALKAN (ABORTED with exit code 1)** dengan paparan ralat pelepasan.
+2. Skrip keselamatan [`scripts/postbuild.mjs`](file:///Users/mac/Documents/darul-muthiah/scripts/postbuild.mjs):
+   - Mengaudit direktori `dist/` untuk memastikan tiada berkas `.pdf`, `.zip`, `.doc` atau fail arkib klien yang tersalin ke folder umum.
+   - Menguatkuasakan `robots.txt` dengan arahan `Disallow: /` bagi mod `internal`.
+   - Menggugurkan fail media pelajar dari folder `dist/assets/` jika dibina dalam mod awam tanpa kelulusan media.
 
-- [ ] Surat/mesej persetujuan bertulis daripada pemilik institusi Maahad Darul Muthiah mengenai 5 butiran kritikal (Tahun sesi, nombor WhatsApp, yuran rasmi, kebenaran foto/video pelajar, domain).
-- [ ] Penukaran pemboleh ubah `publicationMode: 'public'` dalam `src/content/siteConfig.ts`.
-- [ ] Pengemaskinian fail `public/robots.txt` kepada konfigurasi pengindeksan enjin carian awam (`Allow: /` dan peta tapak sitemap).
-- [ ] Penyingkiran sepanduk `PreviewBanner` dan nota-nota semakan dalaman daripada reka letak halaman.
-- [ ] Konfigurasi pelayan hosting ILMU NIAGA untuk menguatkuasakan sambungan HTTPS/SSL secara automatik.
+---
+
+## 3. Senarai Semak Sebelum Go-Live (Owner Sign-off Checklist)
+
+- [ ] Pengesahan bertulis pihak institusi Maahad Darul Muthiah mengenai sesi kemasukan rasmi (2026/2027 atau 2027).
+- [ ] Pengesahan kadar yuran semasa (adakah RM 1,310 / RM 500 / RM 450 masih kekal).
+- [ ] Penyerahan borang kebenaran bertulis bagi penyiaran wajah pelajar bawah umur.
+- [ ] Pengesahan nombor WhatsApp dan e-mel rasmi untuk penerimaan pendaftaran.
+- [ ] Keputusan domain pengeluaran akhir (`madum.edu.my` atau `madum.ilmuniaga.com`).
+- [ ] Pengaktifan `releaseApprovals` dalam `siteConfig.ts` dan penukaran `publicationMode` kepada `'public'`.

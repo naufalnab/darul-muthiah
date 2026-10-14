@@ -1,0 +1,80 @@
+[
+  {
+    "page": "index",
+    "path": "/",
+    "fcpMs": 216,
+    "lcpMs": 216,
+    "lcpElement": "IMG.hero-photo",
+    "cls": 0,
+    "domContentLoadedMs": 34,
+    "loadTimeMs": 38,
+    "fcpRating": "GOOD",
+    "lcpRating": "GOOD",
+    "clsRating": "GOOD"
+  },
+  {
+    "page": "profil",
+    "path": "/profil",
+    "fcpMs": 108,
+    "lcpMs": 108,
+    "lcpElement": "IMG.",
+    "cls": 0,
+    "domContentLoadedMs": 46,
+    "loadTimeMs": 48,
+    "fcpRating": "GOOD",
+    "lcpRating": "GOOD",
+    "clsRating": "GOOD"
+  },
+  {
+    "page": "pengajian",
+    "path": "/pengajian",
+    "fcpMs": 92,
+    "lcpMs": 92,
+    "lcpElement": "IMG.",
+    "cls": 0,
+    "domContentLoadedMs": 10,
+    "loadTimeMs": 11,
+    "fcpRating": "GOOD",
+    "lcpRating": "GOOD",
+    "clsRating": "GOOD"
+  },
+  {
+    "page": "kemasukan",
+    "path": "/kemasukan",
+    "fcpMs": 88,
+    "lcpMs": 88,
+    "lcpElement": "IMG.",
+    "cls": 0,
+    "domContentLoadedMs": 12,
+    "loadTimeMs": 44,
+    "fcpRating": "GOOD",
+    "lcpRating": "GOOD",
+    "clsRating": "GOOD"
+  },
+  {
+    "page": "galeri",
+    "path": "/galeri",
+    "fcpMs": 88,
+    "lcpMs": 88,
+    "lcpElement": "H1.",
+    "cls": 0,
+    "domContentLoadedMs": 16,
+    "loadTimeMs": 57,
+    "fcpRating": "GOOD",
+    "lcpRating": "GOOD",
+    "clsRating": "GOOD"
+  },
+  {
+    "page": "hubungi",
+    "path": "/hubungi",
+    "fcpMs": 108,
+    "lcpMs": 108,
+    "lcpElement": "H1.",
+    "cls": 0,
+    "domContentLoadedMs": 10,
+    "loadTimeMs": 11,
+    "fcpRating": "GOOD",
+    "lcpRating": "GOOD",
+    "clsRating": "GOOD"
+  }
+]

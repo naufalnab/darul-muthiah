@@ -1,3 +1,11 @@
+export interface ReleaseApprovals {
+  feesApproved: boolean;
+  historyApproved: boolean;
+  studentMediaConsentApproved: boolean;
+  officialContactApproved: boolean;
+  jaisUsageApproved: boolean;
+}
+
 export interface SiteConfig {
   institutionName: string;
   brandName: string;
@@ -17,11 +25,20 @@ export interface SiteConfig {
     cityStatePostcode: string;
     full: string;
   };
+  mailingAddress: {
+    street: string;
+    subdistrict: string;
+    cityStatePostcode: string;
+    full: string;
+  };
   googleMapsUrl: string;
   developerName: string;
   developerUrl: string;
   publicationMode: 'internal' | 'public';
+  releaseApprovals: ReleaseApprovals;
   jaisCode: string;
+  jaisRegistrationNo: string;
+  jaisExpiryDate: string;
   lzsAgentCode: string;
 }
 
@@ -44,10 +61,26 @@ export const siteConfig: SiteConfig = {
     cityStatePostcode: '40170 Shah Alam, Selangor',
     full: 'No. 61, Jalan Gunung Nuang U11/28, Seksyen U11, Bukit Bandaraya, 40170 Shah Alam, Selangor.'
   },
+  mailingAddress: {
+    street: 'No. 7, Jalan Pilus Dua 27/24B',
+    subdistrict: 'Seksyen 27',
+    cityStatePostcode: '40400 Shah Alam, Selangor',
+    full: 'No. 7, Jalan Pilus Dua 27/24B, Seksyen 27, 40400 Shah Alam, Selangor.'
+  },
   googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=No+61+Jalan+Gunung+Nuang+U11%2F28+Shah+Alam+Selangor',
   developerName: 'ILMU NIAGA',
   developerUrl: 'https://ilmuniaga.com',
-  publicationMode: 'internal', // DEFAULT: internal preview mode; changes to public only upon formal institutional approval
+  // DEFAULT: internal preview mode. Fails-closed if toggled to 'public' without formal approvals.
+  publicationMode: 'internal',
+  releaseApprovals: {
+    feesApproved: false,
+    historyApproved: false,
+    studentMediaConsentApproved: false,
+    officialContactApproved: false,
+    jaisUsageApproved: false
+  },
   jaisCode: 'BZH8026',
+  jaisRegistrationNo: '13S(8)18/59',
+  jaisExpiryDate: '13 Oktober 2028',
   lzsAgentCode: '1290'
-} as const;
+};
