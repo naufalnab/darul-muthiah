@@ -2,7 +2,40 @@
 
 **Status: PRATONTON DALAMAN sahaja; bukan website yang diterbitkan atau implementasi produksi.**
 
-Buka `index.html` dalam browser selepas ekstrak ZIP. Semua fail boleh diakses secara setempat tanpa server. Navigasi atas ke enam halaman telah disambungkan:
+## Cara menjalankan proyek
+
+Proyek ini menggunakan Astro. Siapkan Node.js 24 LTS dan pnpm 10.32.1 (sesuai `packageManager` di `package.json`).
+
+Jalankan perintah berikut dari folder proyek:
+
+```bash
+corepack enable
+pnpm install
+pnpm dev
+```
+
+Buka http://localhost:4321 di browser. Untuk menghentikan server, tekan `Ctrl+C` di terminal. Jika port tersebut sedang dipakai, gunakan alamat yang ditampilkan di terminal.
+
+Untuk mengakses dari perangkat lain pada jaringan yang sama:
+
+```bash
+pnpm dev --host 0.0.0.0
+```
+
+Gunakan alamat `Network` yang ditampilkan di terminal.
+
+Untuk membuat dan melihat hasil build:
+
+```bash
+pnpm build
+pnpm preview
+```
+
+Buka alamat yang ditampilkan oleh perintah preview.
+
+## Pratonton HTML asal
+
+Untuk versi prototipe HTML asal, buka `index.html` dalam browser selepas ekstrak ZIP. Navigasi atas ke enam halaman telah disambungkan:
 
 - `index.html` — Utama, menggunakan desain homepage yang disetujui sebagai asas
 - `profil.html` — Profil Maahad
