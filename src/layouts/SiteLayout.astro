@@ -1,8 +1,6 @@
 ---
 import '../styles/global.css';
 import '../styles/components.css';
-import PreviewBanner from '../components/PreviewBanner.astro';
-import AnnouncementBar from '../components/AnnouncementBar.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import MobileStickyBar from '../components/MobileStickyBar.astro';
@@ -53,8 +51,6 @@ const robotsDirective = isInternalMode ? 'noindex, nofollow' : 'index, follow';
   <body>
     <a href="#main-content" class="sr-only">Langkau ke kandungan utama</a>
 
-    <PreviewBanner />
-    <AnnouncementBar />
     <SiteHeader activeRoute={activeRoute} />
 
     <main id="main-content" class={isHome ? '' : 'inner'}>

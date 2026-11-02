@@ -5,7 +5,7 @@ import PhotoLightbox from '../components/PhotoLightbox.astro';
 import { siteConfig } from '../content/siteConfig';
 import { galleryPhotos, galleryVideos, galleryFilters } from '../content/gallery';
 
-const title = "Galeri & Pencapaian — MADUM";
+const title = "Galeri & Pencapaian — Maahad tahfizh al-Qur'an";
 const description = "Dokumentasi autentik suasana pembelajaran, hafazan, TVET, sukan, dan rakaman video aktiviti pelajar Maahad Darul Muthiah.";
 
 const isPublic = siteConfig.publicationMode === 'public';
@@ -18,14 +18,13 @@ const mediaApproved = siteConfig.releaseApprovals.studentMediaConsentApproved;
       <nav class="crumbs" aria-label="Breadcrumb">
         <a href="/">Utama</a><b>/</b><span>Galeri &amp; Pencapaian</span>
       </nav>
-      <div class="eyebrow">DOKUMENTASI SEBENAR MADUM</div>
+      <div class="eyebrow">DOKUMENTASI SEBENAR Maahad tahfizh al-Qur'an</div>
       <h1 id="galeri-hero-title">
         Melihat kehidupan <em>di Darul Muthiah.</em>
       </h1>
       <p class="inner-lead">
         Sorotan aktiviti Al-Quran, pembelajaran, kemahiran, sukan dan lawatan daripada bahan yang dibekalkan oleh pihak maahad.
       </p>
-      <span class="pending">Pratonton dalaman · Kebenaran penerbitan foto/video diperlukan</span>
     </div>
   </section>
 
@@ -98,7 +97,7 @@ const mediaApproved = siteConfig.releaseApprovals.studentMediaConsentApproved;
   <section class="section-compact surface-white" aria-labelledby="video-title">
     <div class="container">
       <div class="eyebrow">VIDEO AKTIVITI</div>
-      <h2 class="section-title" id="video-title">Momen MADUM dalam video.</h2>
+      <h2 class="section-title" id="video-title">Momen Maahad tahfizh al-Qur'an dalam video.</h2>
       <p class="section-sub">Video hanya dimainkan apabila dipilih pengunjung; bunyi tidak dimainkan secara automatik.</p>
       
       {isPublic && !mediaApproved ? (
@@ -138,7 +137,7 @@ const mediaApproved = siteConfig.releaseApprovals.studentMediaConsentApproved;
   <!-- Final CTA -->
   <PrimaryCTA
     eyebrow="LANGKAH SETERUSNYA"
-    title="Ingin mengetahui suasana pendidikan MADUM dengan lebih lanjut?"
+    title="Ingin mengetahui suasana pendidikan Maahad tahfizh al-Qur'an dengan lebih lanjut?"
     description="Hubungi pihak maahad untuk bertanya tentang pengajian atau mengatur lawatan yang dipersetujui."
     ctaText="Tanya Kemasukan"
     ctaHref="/kemasukan#pertanyaan"

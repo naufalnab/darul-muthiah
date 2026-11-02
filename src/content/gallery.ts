@@ -38,7 +38,7 @@ export const galleryPhotos: GalleryPhoto[] = [
     cat: 'kelas',
     catLabel: 'Hafazan & Kelas',
     title: 'Suasana kelas pengajian',
-    alt: 'Dokumentasi sebenar suasana kelas pelajar MADUM'
+    alt: 'Dokumentasi sebenar suasana kelas pelajar Maahad tahfizh al-Qur\'an'
   },
   {
     id: 'photo-3',
@@ -94,7 +94,7 @@ export const galleryPhotos: GalleryPhoto[] = [
     cat: 'sukan',
     catLabel: 'Sukan & Rehlah',
     title: 'Lawatan sambil belajar',
-    alt: 'Aktiviti lawatan sambil belajar dan rehlah pelajar MADUM'
+    alt: 'Aktiviti lawatan sambil belajar dan rehlah pelajar Maahad tahfizh al-Qur\'an'
   },
   {
     id: 'photo-10',
@@ -127,7 +127,7 @@ export const galleryVideos: GalleryVideo[] = [
     id: 'video-1',
     src: '/assets/intro-madum.mp4',
     poster: '/assets/video-intro.webp',
-    title: 'Identiti MADUM',
+    title: 'Identiti Maahad tahfizh al-Qur\'an',
     description: 'Animasi pengenalan logo institusi.'
   },
   {
