@@ -1946,14 +1946,23 @@ dialog.lightbox[open] {
     margin-top: 6px;
   }
   .hero {
-    background: var(--cream);
+    background: #083b30 url('/assets/hero-utama.jpeg') 60% center / cover no-repeat;
   }
   .hero::before {
-    width: 480px;
-    height: 480px;
-    right: -350px;
-    top: -130px;
+    inset: 0;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(3, 48, 38, .92), rgba(3, 48, 38, .66));
   }
+  .hero-copy .hero-note, .hero h1, .hero-description, .hero-meta {
+    color: #fff;
+  }
+  .hero h1 em { color: #e4c382; }
+  .hero-actions .btn-primary { background: #e9c989; color: #123f35; border-color: #e9c989; }
+  .hero-actions .btn-outline { color: #fff; border-color: rgba(255, 255, 255, .7); }
+  .hero-meta .tiny-icon { color: #fff; border-color: rgba(255, 255, 255, .6); }
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -2000,9 +2009,7 @@ dialog.lightbox[open] {
     gap: 8px;
   }
   .hero-visual {
-    width: 92%;
-    margin: 8px 18px 0 15px;
-    justify-self: center;
+    display: none;
   }
   .hero-photo {
     height: 350px;
