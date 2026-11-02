@@ -1782,6 +1782,30 @@ dialog.lightbox[open] {
    RESPONSIVE BREAKPOINTS (MATCHING APPROVED PROTOTYPE SPECIFICATIONS)
    ========================================================================= */
 
+@media (min-width: 751px) {
+  .hero {
+    background: #083b30 url('/assets/hero-utama.jpeg') center center / cover no-repeat;
+  }
+  .hero::before {
+    inset: 0;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(3, 48, 38, .93) 0%, rgba(3, 48, 38, .75) 28%, rgba(3, 48, 38, .1) 60%, transparent 100%);
+  }
+  .hero-grid { display: flex; min-height: 680px; }
+  .hero-copy { max-width: 470px; }
+  .hero-copy .hero-note, .hero h1, .hero-description, .hero-meta { color: #fff; }
+  .hero h1 { max-width: 440px; }
+  .hero h1 em { color: #e4c382; }
+  .hero-description { max-width: 420px; }
+  .hero-actions .btn-primary { background: #e9c989; color: #123f35; border-color: #e9c989; }
+  .hero-actions .btn-outline { color: #fff; border-color: rgba(255,255,255,.7); }
+  .hero-meta .tiny-icon { color: #fff; border-color: rgba(255,255,255,.6); }
+  .hero-visual { display: none; }
+}
+
 @media (max-width: 1230px) {
   .container {
     padding-left: 32px;
