@@ -67,7 +67,7 @@ export const siteConfig: SiteConfig = {
     cityStatePostcode: '40400 Shah Alam, Selangor',
     full: 'No. 7, Jalan Pilus Dua 27/24B, Seksyen 27, 40400 Shah Alam, Selangor.'
   },
-  googleMapsUrl: 'https://share.google/k8fQQLUAM7ZlcjUcI',
+  googleMapsUrl: 'https://maps.app.goo.gl/EMhdSKe49Ew4eyAk9',
   developerName: 'ILMU NIAGA',
   developerUrl: 'https://ilmuniaga.com',
   // DEFAULT: internal preview mode. Fails-closed if toggled to 'public' without formal approvals.
