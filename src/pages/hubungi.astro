@@ -19,7 +19,7 @@ const description = "Maklumat perhubungan rasmi, nombor WhatsApp, lokasi Shah Al
         Kami sedia membantu <em>pertanyaan anda.</em>
       </h1>
       <p class="inner-lead">
-        Hubungi pihak maahad bagi pertanyaan tentang pengajian, kemasukan, yuran atau lawatan. Saluran berikut berdasarkan maklumat yang dibekalkan klien dan perlu disemak sebelum penerbitan.
+        Hubungi pihak maahad bagi pertanyaan tentang pengajian, kemasukan, yuran atau lawatan. Kami sedia membantu menjawab pertanyaan anda.
       </p>
       <a
         class="btn btn-primary"
@@ -63,9 +63,6 @@ const description = "Maklumat perhubungan rasmi, nombor WhatsApp, lokasi Shah Al
           <a href={`mailto:${siteConfig.emailOffice}`}>
             Hantar e-mel ↗
           </a>
-          <p style="font-size:10px;color:#86632d;margin-top:6px;">
-            Alamat e-mel menunggu pengesahan institusi.
-          </p>
         </article>
       </div>
     </div>
@@ -86,17 +83,11 @@ const description = "Maklumat perhubungan rasmi, nombor WhatsApp, lokasi Shah Al
         >
           Buka Google Maps <span class="arrow" aria-hidden="true">↗</span>
         </a>
-        <div class="review-note">
-          Ilustrasi lokasi di sebelah bukan peta navigasi sebenar. Alamat pengunjung dan pin destinasi perlu disahkan dengan pihak maahad.
-        </div>
       </div>
-
-      <div class="map-panel" role="img" aria-label="Ilustrasi lokasi Maahad Darul Muthiah di Shah Alam">
-        <div class="map-pin">
-          {siteConfig.brandName}
-          <small style="display:block;font-size:10px;font-weight:500">Shah Alam</small>
-        </div>
-        <div class="map-notice">Ilustrasi kawasan · Klik Google Maps untuk navigasi</div>
+      <div class="review-note">
+        <strong>Lokasi Maahad Darul Muthiah</strong>
+        <p>Buka pautan Google untuk melihat lokasi dan mendapatkan arah perjalanan.</p>
+        <a href={siteConfig.googleMapsUrl} target="_blank" rel="noopener noreferrer">Lihat lokasi ↗</a>
       </div>
     </div>
   </section>
@@ -131,6 +122,5 @@ const description = "Maklumat perhubungan rasmi, nombor WhatsApp, lokasi Shah Al
     description="Salurkan soalan kepada pihak maahad melalui borang pertanyaan WhatsApp yang ringkas."
     ctaText="Tanya Kemasukan"
     ctaHref="/kemasukan#pertanyaan"
-    disclaimer="Pratonton dalaman · Pengesahan diperlukan"
   />
 </SiteLayout>

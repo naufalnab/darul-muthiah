@@ -7,7 +7,7 @@ console.log('[prebuild] Starting pre-build validation & publication safety check
 const siteConfigPath = path.resolve('src/content/siteConfig.ts');
 const siteConfigCode = fs.readFileSync(siteConfigPath, 'utf-8');
 
-const isPublicMatch = siteConfigCode.match(/publicationMode:\s*['"](internal|public)['"]/);
+const isPublicMatch = siteConfigCode.match(/publicationMode:\s*['"](internal|public)['"]\s*,/);
 const publicationMode = isPublicMatch ? isPublicMatch[1] : 'internal';
 
 const feesApproved = /feesApproved:\s*true/.test(siteConfigCode);

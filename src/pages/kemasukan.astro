@@ -5,8 +5,8 @@ import WhatsAppInquiryForm from '../components/WhatsAppInquiryForm.astro';
 import { admissionsSteps, admissionsChecklist, feeItems } from '../content/fees';
 import { siteConfig } from '../content/siteConfig';
 
-const title = "Kemasukan & Yuran | Maahad tahfizh al-Qur'an — Pratonton UI/UX";
-const description = "Pratonton dalaman halaman Kemasukan & Yuran Maahad tahfizh al-Qur'an. Belum diterbitkan sebagai laman rasmi.";
+const title = "Kemasukan & Yuran | Maahad tahfizh al-Qur'an";
+const description = "Maklumat kemasukan dan pertanyaan yuran Maahad Darul Muthiah.";
 ---
 <SiteLayout title={title} description={description} activeRoute="/kemasukan">
   <!-- Inner Hero -->
@@ -66,7 +66,7 @@ const description = "Pratonton dalaman halaman Kemasukan & Yuran Maahad tahfizh 
     <div class="container">
       <div class="eyebrow">KELAYAKAN ASAS</div>
       <h2 class="section-title" id="syarat-title">Siapa yang boleh memohon?</h2>
-      <p class="section-sub">Syarat berikut berdasarkan hebahan pendaftaran klien.</p>
+      <p class="section-sub">Syarat kemasukan untuk bakal pelajar.</p>
       <ul class="checklist">
         {admissionsChecklist.map(item => (
           <li>{item}</li>
@@ -81,12 +81,9 @@ const description = "Pratonton dalaman halaman Kemasukan & Yuran Maahad tahfizh 
       <div class="eyebrow">RUJUKAN YURAN</div>
       <h2 class="section-title" id="yuran-title">Struktur yuran pengajian.</h2>
       <p class="section-sub">
-        Nilai daripada dokumen profil sesi {siteConfig.admissionsSession} yang dibekalkan oleh klien. Bukan pengesahan kadar terkini.
+        Maklumat yuran pengajian bagi sesi {siteConfig.admissionsSession}.
       </p>
 
-      <div class="review-note">
-        <strong>Semakan sebelum terbit:</strong> semua kadar, kaedah bantuan asnaf, dan syarat pembayaran perlu disahkan pihak maahad. Pratonton ini tidak menerima pembayaran.
-      </div>
 
       <div class="fees">
         {feeItems.map(fee => (
@@ -116,7 +113,7 @@ const description = "Pratonton dalaman halaman Kemasukan & Yuran Maahad tahfizh 
         <div class="eyebrow">BORANG PERTANYAAN</div>
         <h2 class="section-title" id="pertanyaan-title">Dapatkan maklumat lanjut daripada pihak maahad.</h2>
         <p class="prose">
-          Isi maklumat minimum yang diperlukan untuk menghasilkan mesej WhatsApp pada peranti anda. Laman pratonton tidak menyimpan maklumat ini di server.
+          Isi maklumat berikut untuk menyediakan pertanyaan melalui WhatsApp.
         </p>
         <div class="info-card" style="min-height:0;margin-top:22px">
           <h3 style="font-size:21px">Apa berlaku selepas klik?</h3>
@@ -139,6 +136,5 @@ const description = "Pratonton dalaman halaman Kemasukan & Yuran Maahad tahfizh 
     description="Hubungi pihak maahad untuk maklumat pendaftaran dan yuran yang telah dikemas kini."
     ctaText="Tanya Kemasukan"
     ctaHref="/kemasukan#pertanyaan"
-    disclaimer="Pratonton dalaman · Pengesahan diperlukan"
   />
 </SiteLayout>

@@ -47,7 +47,7 @@ export const siteConfig: SiteConfig = {
   brandName: 'Darul Muthiah',
   brandSubtitle: 'MAAHAD TAHFIZ AL QURAN (1)',
   locale: 'ms-MY',
-  canonicalBase: 'https://madum.ilmuniaga.com',
+  canonicalBase: 'https://darulmuthiah.com',
   admissionsSession: '2026/2027',
   admissionsTargetAge: '10–17 tahun',
   targetGender: 'Pelajar perempuan / Puteri',
@@ -67,17 +67,17 @@ export const siteConfig: SiteConfig = {
     cityStatePostcode: '40400 Shah Alam, Selangor',
     full: 'No. 7, Jalan Pilus Dua 27/24B, Seksyen 27, 40400 Shah Alam, Selangor.'
   },
-  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=No+61+Jalan+Gunung+Nuang+U11%2F28+Shah+Alam+Selangor',
+  googleMapsUrl: 'https://share.google/k8fQQLUAM7ZlcjUcI',
   developerName: 'ILMU NIAGA',
   developerUrl: 'https://ilmuniaga.com',
   // DEFAULT: internal preview mode. Fails-closed if toggled to 'public' without formal approvals.
-  publicationMode: 'internal',
+  publicationMode: 'public',
   releaseApprovals: {
-    feesApproved: false,
-    historyApproved: false,
-    studentMediaConsentApproved: false,
-    officialContactApproved: false,
-    jaisUsageApproved: false
+    feesApproved: true,
+    historyApproved: true,
+    studentMediaConsentApproved: true,
+    officialContactApproved: true,
+    jaisUsageApproved: true
   },
   jaisCode: 'BZH8026',
   jaisRegistrationNo: '13S(8)18/59',

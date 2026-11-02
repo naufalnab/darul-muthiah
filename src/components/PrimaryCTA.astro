@@ -19,7 +19,7 @@ const {
   ctaText = 'Tanya Kemasukan',
   ctaHref = '/kemasukan#pertanyaan',
   isExternal = false,
-  disclaimer = 'Pratonton dalaman · Pengesahan diperlukan',
+  disclaimer = '',
   sectionClass = 'section-ending'
 } = Astro.props;
 ---
@@ -40,7 +40,7 @@ const {
         >
           {ctaText} <span class="arrow" aria-hidden="true">↗</span>
         </a>
-        <small>{disclaimer}</small>
+        {disclaimer && <small>{disclaimer}</small>}
       </div>
     </div>
   </div>

@@ -5,8 +5,8 @@ import PrimaryCTA from '../components/PrimaryCTA.astro';
 import { programsList, curriculumPillars } from '../content/programs';
 import { siteConfig } from '../content/siteConfig';
 
-const title = "Maahad tahfizh al-Qur'an — Pratonton Website (Konsep UI/UX v1.0)";
-const description = "Pratonton konsep homepage Maahad Tahfiz Al Quran Darul Muthiah (1). Bukan laman rasmi yang diterbitkan.";
+const title = "Maahad tahfizh al-Qur'an — Darul Muthiah";
+const description = "Pendidikan tahfiz dan pembinaan sahsiah pelajar perempuan di Shah Alam.";
 ---
 <SiteLayout title={title} description={description} activeRoute="/" isHome={true}>
   <!-- Hero Section -->
@@ -247,7 +247,6 @@ const description = "Pratonton konsep homepage Maahad Tahfiz Al Quran Darul Muth
     ctaText="Pertanyaan melalui WhatsApp"
     ctaHref={`https://wa.me/${siteConfig.whatsappE164}?text=Assalamualaikum.%20Saya%20ingin%20bertanya%20tentang%20kemasukan%20ke%20Maahad%20tahfizh%20al-Qur%27an.`}
     isExternal={true}
-    disclaimer="Maklumat rasmi perlu disahkan sebelum diterbitkan."
     sectionClass="final-cta-section"
   />
 </SiteLayout>

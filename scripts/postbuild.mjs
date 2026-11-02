@@ -5,7 +5,7 @@ const distDir = path.resolve('dist');
 const siteConfigPath = path.resolve('src/content/siteConfig.ts');
 const siteConfigCode = fs.readFileSync(siteConfigPath, 'utf-8');
 
-const isPublicMatch = siteConfigCode.match(/publicationMode:\s*['"](internal|public)['"]/);
+const isPublicMatch = siteConfigCode.match(/publicationMode:\s*['"](internal|public)['"]\s*,/);
 const publicationMode = isPublicMatch ? isPublicMatch[1] : 'internal';
 const studentMediaConsentApproved = /studentMediaConsentApproved:\s*true/.test(siteConfigCode);
 
@@ -88,7 +88,7 @@ if (publicationMode === 'internal') {
 } else {
   fs.writeFileSync(
     robotsPath,
-    '# Public Production\nUser-agent: *\nAllow: /\n\nSitemap: https://madum.ilmuniaga.com/sitemap.xml\n',
+    '# Public Production\nUser-agent: *\nAllow: /\n',
     'utf-8'
   );
   console.log('[postbuild] Configured public robots.txt with sitemap reference');
