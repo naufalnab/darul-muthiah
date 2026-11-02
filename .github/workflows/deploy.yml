@@ -34,4 +34,4 @@ jobs:
           LFTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
           test -n "$FTP_PASSWORD" || { echo 'Set the FTP_PASSWORD repository secret first.'; exit 1; }
-          lftp -u 'admin@darulmuthiah.com,' -e 'set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate true; mirror --reverse --verbose --exclude-glob *.html dist/ ./; mirror --reverse --verbose --include-glob */ --include-glob *.html dist/ ./; bye' ftp://ftp.darulmuthiah.com
+          lftp --env-password -u 'admin@darulmuthiah.com' -e 'set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate true; mirror --reverse --verbose --exclude-glob *.html dist/ ./; mirror --reverse --verbose --include-glob */ --include-glob *.html dist/ ./; bye' ftp://ftp.darulmuthiah.com
